@@ -3,9 +3,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 public class Main {
     public static int s;
+    // creating an instance of college
+    static college c = new college();
     public static void menu() {
         System.out.println("Welcome to admin");
-        System.out.println("----------------------------------------");
+        System.out.println("----5------------------------------------");
         System.out.println("1. Manage students");
         System.out.println("2. Manage teachers");
         System.out.println("3. Manage subjects");
@@ -19,6 +21,29 @@ public class Main {
             s = Integer.parseInt(bufferRead.readLine());
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+        // switch statement to check choice
+        switch (s) {
+            case 1:
+                System.out.println("Manage students");
+                break;
+            case 2:
+                System.out.println("Manage teachers");
+                break;
+            case 3:
+                System.out.println("Manage subjects");
+                break;
+            case 4:
+                System.out.println("Manage classes");
+                break;
+            case 5:
+                c.addCollage();
+                break;
+            case 6:
+                System.out.println("Exit");
+                break;
+            default:
+                System.out.println("Invalid choice");
         }
     }
     public static void main(String[] args) {
