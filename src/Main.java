@@ -7,7 +7,7 @@ public class Main {
     static college c = new college();
     public static void menu() {
         System.out.println("Welcome to admin");
-        System.out.println("----5------------------------------------");
+        System.out.println("----------------------------------------");
         System.out.println("1. Manage students");
         System.out.println("2. Manage teachers");
         System.out.println("3. Manage subjects");
@@ -25,7 +25,9 @@ public class Main {
         // switch statement to check choice
         switch (s) {
             case 1:
-                System.out.println("Manage students");
+                // creating an instance of users
+                users u = new users();
+                u.Smenu();
                 break;
             case 2:
                 System.out.println("Manage teachers");
@@ -37,7 +39,7 @@ public class Main {
                 System.out.println("Manage classes");
                 break;
             case 5:
-                c.addCollage();
+                c.collegem();
                 break;
             case 6:
                 System.out.println("Exit");
