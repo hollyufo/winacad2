@@ -53,14 +53,26 @@ public class users {
         users.remove(id);
         System.out.println("The student has been deleted successfully");
     }
+    // method to search for a student
+    public static void searchStudent() {
+        System.out.println("Enter the name of the student: ");
+        Scanner myObj = new Scanner(System.in);
+        Name = myObj.nextLine();
+        for (int i = 0; i < users.size(); i++) {
+            String student = users.get(i);
+            if (student.contains(Name)) {
+                System.out.println(student);
+            }
+        }
+    }
     // menu to display options
     public static void Smenu() {
         System.out.println("Welcome to students");
         System.out.println("----------------------------------------");
         System.out.println("1. Add student");
         System.out.println("2. Display student");
-        System.out.println("3. Update student");
-        System.out.println("4. Delete student");
+        System.out.println("3. Delete student");
+        System.out.println("4 search student.");
         System.out.println("5. Exit");
         System.out.println("----------------------------------------");
         System.out.print("Enter your choice: ");
@@ -77,8 +89,11 @@ public class users {
                 break;
             case 3:
                 deleteStudent();
+            case 4:
+                searchStudent();
+                break;
             default:
-                throw new IllegalStateException("Unexpected value: " + choice);
+                System.out.println("Invalid choice");
         }
     }
 }
