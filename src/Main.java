@@ -30,7 +30,7 @@ public class Main {
                 u.Smenu();
                 break;
             case 2:
-                System.out.println("Manage teachers");
+                teacher.Tmenu();
                 break;
             case 3:
                 System.out.println("Manage subjects");
