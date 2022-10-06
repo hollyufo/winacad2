@@ -13,7 +13,8 @@ public class Main {
         System.out.println("3. Manage subjects");
         System.out.println("4. Manage classes");
         System.out.println("5. Manage collages");
-        System.out.println("6. Exit");
+        System.out.println("6. Manage marks");
+        System.out.println("7. Exit");
         System.out.println("----------------------------------------");
         System.out.print("Enter your choice: ");
         BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
@@ -43,6 +44,11 @@ public class Main {
                 break;
             case 6:
                 System.out.println("Exit");
+                break;
+            case 7:
+                // creating an instance of marks
+                marks m = new marks();
+                m.mmenu();
                 break;
             default:
                 System.out.println("Invalid choice");
