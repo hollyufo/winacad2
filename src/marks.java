@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class marks {
+    // testing
     // attributes of marks
     static String Name;
     static String mark;
